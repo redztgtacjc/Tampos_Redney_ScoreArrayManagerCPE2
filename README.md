@@ -15,3 +15,8 @@ This project implements a fixed-capacity integer array manager (`ScoreArrayManag
 2. Compile the Java file:
    ```bash
    javac ScoreArrayManager.java
+   ## Viva Q&A
+* **Q: Why is arr[index] O(1), while inserting at index 0 is O(n)?**
+  * **Answer:** 
+    * `arr[index]` is **$O(1)$ (Constant Time)** because the computer uses direct memory arithmetic (`base address + index × element size`) to jump instantly to the exact location, regardless of how large the array is.
+    * Inserting at index 0 is **$O(n)$ (Linear Time)** because every existing element in the array must be shifted one position to the right to clear out index 0, meaning the number of shift operations grows linearly with the number of elements ($n$) currently stored.
